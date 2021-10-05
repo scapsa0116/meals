@@ -59,8 +59,40 @@ header
   button {
   background-color: transparent;
   border: none;
-  color: #aaa;
-  font-size: 2rem;
+  color: rgb(
+    138,
+    129,
+    141
+  );
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.fav-container {
+  background-color: rgb(
+    243,
+    225,
+    255
+  );
+  padding: 0.25rem
+    1rem;
+  text-align: center;
+}
+
+.fav-meals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.fav-meals
+  li {
+  cursor: pointer;
+  position: relative;
+  margin: 5px;
+  width: 75px;
 }
 
 
