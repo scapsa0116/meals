@@ -103,8 +103,57 @@ header
 .fav-meals
   li
   img {
+  border: 2px
+    solid
+    #ffffff;
+  box-shadow: 0
+    0px
+    #3333331a;
   border-radius: 50%;
   object-fit: cover;
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
+}
+
+.fav-meals
+  li
+  span {
+  font-size: 0.9rem;
+}
+
+.meal {
+  border-radius: 3px;
+  box-shadow: 0
+    0
+    10px
+    2px
+    #3333331a;
+  margin: 1.5rem;
+}
+.meal-header {
+  position: relative;
+}
+
+.meal-header
+  .random {
+  position: absolute;
+  top: 10px;
+  background-color: #ffffff;
+  padding: 0.25rem
+    1rem;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+meal-header
+  img {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+}
+.meal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
