@@ -157,3 +157,13 @@ meal-header
   justify-content: space-between;
   padding: 1rem;
 }
+
+meal-body
+  h4 {
+  margin: 0;
+}
+
+.meal-body
+  button {
+  background-color: transparent;
+}
