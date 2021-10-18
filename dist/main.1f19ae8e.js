@@ -122,6 +122,13 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+// const mealsEl = document.getElementById("meals");
+// const favoriteContainer = document.getElementById("fav-meals");
+// const mealPopup = document.getElementById("meal-popup");
+// const mealInfoEl = document.getElementById("meal-info");
+// const popupCloseBtn = document.getElementById("close-popup");
+// const searchTerm = document.getElementById("search-term");
+// const searchBtn = document.getElementById("search");
 getRandomMeal();
 
 function getRandomMeal() {
@@ -140,14 +147,11 @@ function _getRandomMeal() {
 
           case 2:
             resp = _context.sent;
-            _context.next = 5;
-            return resp.json();
+            // const resp = await resp.json();
+            randomMeal = respData.meals[0];
+            console.log(randomMeal.meals[0]);
 
           case 5:
-            randomMeal = _context.sent;
-            console.log(randomMeal);
-
-          case 7:
           case "end":
             return _context.stop();
         }
@@ -238,7 +242,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56624" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57491" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
