@@ -132,87 +132,45 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 getRandomMeal();
 
 function getRandomMeal() {
-  return _getRandomMeal.apply(this, arguments);
+  fetch("https://www.themealdb.com/api/json/v1/1/random.php", {
+    method: 'POST',
+    // or 'PUT'
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }); // const resp = await resp.json();
+  // const randomMeal = respData.meals[0];
+  // console.log(randomMeal.meals[0])
 }
 
-function _getRandomMeal() {
-  _getRandomMeal = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var resp, randomMeal;
+function getMealById(_x) {
+  return _getMealById.apply(this, arguments);
+} // async function getMealsBySearch(term){
+//     const meals = await fetch("www.themealdb.com/api/json/v1/1/search.php?s="+term)
+// }
+
+
+function _getMealById() {
+  _getMealById = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(id) {
+    var meal;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return fetch("https://www.themealdb.com/api/json/v1/1/random.php");
+            return fetch("www.themealdb.com/api/json/v1/1/lookup.php?i=" + id);
 
           case 2:
-            resp = _context.sent;
-            // const resp = await resp.json();
-            randomMeal = respData.meals[0];
-            console.log(randomMeal.meals[0]);
+            meal = _context.sent;
 
-          case 5:
+          case 3:
           case "end":
             return _context.stop();
         }
       }
     }, _callee);
   }));
-  return _getRandomMeal.apply(this, arguments);
-}
-
-function getMealById(_x) {
   return _getMealById.apply(this, arguments);
-}
-
-function _getMealById() {
-  _getMealById = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(id) {
-    var meal;
-    return regeneratorRuntime.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return fetch("www.themealdb.com/api/json/v1/1/lookup.php?i=" + id);
-
-          case 2:
-            meal = _context2.sent;
-
-          case 3:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  }));
-  return _getMealById.apply(this, arguments);
-}
-
-function getMealsBySearch(_x2) {
-  return _getMealsBySearch.apply(this, arguments);
-}
-
-function _getMealsBySearch() {
-  _getMealsBySearch = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(term) {
-    var meals;
-    return regeneratorRuntime.wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            _context3.next = 2;
-            return fetch("www.themealdb.com/api/json/v1/1/search.php?s=" + term);
-
-          case 2:
-            meals = _context3.sent;
-
-          case 3:
-          case "end":
-            return _context3.stop();
-        }
-      }
-    }, _callee3);
-  }));
-  return _getMealsBySearch.apply(this, arguments);
 }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
